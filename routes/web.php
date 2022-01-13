@@ -51,3 +51,20 @@ Route::middleware(['student'])->group(function () {
    Route::get('online-classes', [StudentController::class, 'zoomMeetings']);
 });
 //End Student
+
+
+Route::get("/cache",function(){
+ Artisan::call("cache:clear");
+});
+
+Route::get("/storage",function(){
+    Artisan::call("storage:link");
+});
+
+Route::get("/route-clear",function(){
+    Artisan::call("route:clear");
+});
+
+Route::get("/view-clear",function(){
+    Artisan::call("view:clear");
+});
