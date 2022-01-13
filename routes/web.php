@@ -61,6 +61,10 @@ Route::get("/storage",function(){
     Artisan::call("storage:link");
 });
 
+Route::get("/config-clear",function(){
+    Artisan::call("config:clear");
+});
+
 Route::get("/route-clear",function(){
     Artisan::call("route:clear");
 });
